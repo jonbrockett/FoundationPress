@@ -10,11 +10,13 @@
 ?>
 
 <footer class="footer">
-    <div class="footer-container">
-        <div class="footer-grid">
-            <?php dynamic_sidebar( 'footer-widgets' ); ?>
-        </div>
+  <div class="grid-container">
+    <div class="grid-x">
+      <div class="cell">
+        <?php foundationpress_privacy_nav(); ?>
+      </div>
     </div>
+  </div>
 </footer>
 
 <?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>

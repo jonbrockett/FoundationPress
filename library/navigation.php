@@ -58,6 +58,25 @@ if ( ! function_exists( 'foundationpress_mobile_nav' ) ) {
 
 
 /**
+ * Privacy navigation
+ */
+ if ( ! function_exists( 'foundationpress_privacy_nav' ) ) {
+ 	function foundationpress_privacy_nav() {
+ 		wp_nav_menu(
+ 			array(
+ 				'container'      => false,
+ 				'menu_class'     => 'menu',
+ 				'items_wrap'     => '<ul id="%1$s" class="%2$s privacy-menu">%3$s</ul>',
+ 				'theme_location' => 'privacy-nav',
+ 				'depth'          => 1,
+ 				'fallback_cb'    => false,
+ 			)
+ 		);
+ 	}
+ }
+
+
+/**
  * Add support for buttons in the top-bar menu:
  * 1) In WordPress admin, go to Apperance -> Menus.
  * 2) Click 'Screen Options' from the top panel and enable 'CSS CLasses' and 'Link Relationship (XFN)'
