@@ -64,6 +64,9 @@
 @import "global/wp-admin";
 @import "global/wp-overrides";
 @import "global/gutenberg";
+@import "global/svg";
+@import "global/headers";
+//@import "global/url-friendly-color"; // used for colors in SVGs in background-image
 
 // Modules
 @import "modules/navigation";
@@ -77,7 +80,12 @@
 @import "components/featured-image";
 @import "components/dividers";
 @import "components/links";
+@import "components/gravity-forms";
+@import "components/reversed";
 
 // Templates
 @import "templates/front";
-@import "templates/kitchen-sink";
+//@import "templates/kitchen-sink";
+
+// Print
+@import "global/print";
