@@ -9,7 +9,12 @@
  */
 ?>
 
-<footer class="footer">
+<?php
+/**
+ * Footer
+ */
+?>
+<footer id="footer" class="footer" role="contentinfo">
   <div class="grid-container">
     <div class="grid-x">
       <div class="cell">
