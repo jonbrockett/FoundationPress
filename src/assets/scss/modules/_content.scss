@@ -5,9 +5,11 @@
 .main-grid {
   @include xy-grid();
   margin-top: 1rem;
+  margin-bottom: 1rem;
 
   @include breakpoint(medium) {
     margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 
   &.sidebar-left {
@@ -27,6 +29,9 @@
   // Full width template
   .main-content-full-width {
     @include xy-cell(12);
+    @include breakpoint(large) {
+      @include xy-cell(10);
+    }
   }
 
   // Default template
