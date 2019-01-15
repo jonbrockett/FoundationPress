@@ -14,9 +14,16 @@ get_header(); ?>
 
 </header>
 
-<?php do_action( 'foundationpress_before_content' ); ?>
-<?php while ( have_posts() ) : the_post(); ?>
-<section class="intro" role="main">
+
+<main id="main" class="intro" role="main">
+
+	<?php
+	/**
+	 * Intro
+	 */
+	?>
+	<?php do_action( 'foundationpress_before_content' ); ?>
+	<?php while ( have_posts() ) : the_post(); ?>
 	<div class="fp-intro">
 
 		<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
@@ -41,9 +48,10 @@ get_header(); ?>
 		</div>
 
 	</div>
+	<?php endwhile; ?>
+	<?php do_action( 'foundationpress_after_content' ); ?>
 
-</section>
-<?php endwhile; ?>
-<?php do_action( 'foundationpress_after_content' ); ?>
+</main>
+
 
 <?php get_footer();

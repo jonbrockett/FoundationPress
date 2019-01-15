@@ -10,33 +10,36 @@ get_header(); ?>
 
 <div class="main-container">
 	<div class="main-grid">
-		<main id="search-results" class="main-content">
+		<main id="main" class="main-content" role="main">
+			<div id="search-results">
 
-		<header>
-			<h1 class="entry-title"><?php _e( 'Search Results for', 'foundationpress' ); ?> "<?php echo get_search_query(); ?>"</h1>
-		</header>
+				<header>
+					<h1 class="entry-title"><?php _e( 'Search Results for', 'foundationpress' ); ?> "<?php echo get_search_query(); ?>"</h1>
+				</header>
 
-		<?php if ( have_posts() ) : ?>
+				<?php if ( have_posts() ) : ?>
 
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
-			<?php endwhile; ?>
+					<?php while ( have_posts() ) : the_post(); ?>
+						<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+					<?php endwhile; ?>
 
-			<?php else : ?>
-				<?php get_template_part( 'template-parts/content', 'none' ); ?>
+					<?php else : ?>
+						<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-		<?php endif; ?>
+				<?php endif; ?>
 
-		<?php
-		if ( function_exists( 'foundationpress_pagination' ) ) :
-			foundationpress_pagination();
-		elseif ( is_paged() ) :
-		?>
-			<nav id="post-nav">
-				<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
-				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
-			</nav>
-		<?php endif; ?>
+				<?php
+				if ( function_exists( 'foundationpress_pagination' ) ) :
+					foundationpress_pagination();
+				elseif ( is_paged() ) :
+				?>
+					<nav id="post-nav">
+						<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'foundationpress' ) ); ?></div>
+						<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
+					</nav>
+				<?php endif; ?>
+
+			</div>
 
 		</main>
 	<?php get_sidebar(); ?>

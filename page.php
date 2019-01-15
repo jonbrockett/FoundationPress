@@ -15,7 +15,7 @@
 <?php get_template_part( 'template-parts/featured-image' ); ?>
 <div class="main-container">
 	<div class="main-grid">
-		<main class="main-content-full-width">
+		<main id="main" class="main-content-full-width" role="main">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 				<?php comments_template(); ?>
