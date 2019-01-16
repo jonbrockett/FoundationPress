@@ -10,7 +10,7 @@ get_header(); ?>
 
 <div class="main-container">
 	<div class="main-grid">
-		<main id="main" class="main-content" role="main">
+		<main id="main" class="main-content">
 			<div id="search-results">
 
 				<header>
