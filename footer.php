@@ -18,7 +18,9 @@
   <div class="grid-container">
     <div class="grid-x">
       <div class="cell">
-        <?php foundationpress_privacy_nav(); ?>
+        <nav aria-label="Privacy menu">
+          <?php foundationpress_privacy_nav(); ?>
+        </nav>
       </div>
     </div>
   </div>

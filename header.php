@@ -59,7 +59,7 @@
 		 * Desktop/Tablet Menu
 		 */
 		?>
-		<nav class="site-navigation top-bar" role="navigation">
+		<nav class="site-navigation top-bar" aria-label="Main menu">
 			<div class="top-bar-left">
 				<div class="site-desktop-title top-bar-title">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
