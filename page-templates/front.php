@@ -6,10 +6,10 @@ get_header(); ?>
 
 <section class="front-hero">
 	<article class="marketing">
-		<div class="tagline">
+		<header class="tagline">
 			<h1 class="hero-title"><?php bloginfo( 'name' ); ?></h1>
 			<h2 class="h4 subheader"><?php bloginfo( 'description' ); ?></h2>
-		</div>
+		</header>
 	</article>
 
 </section>
@@ -35,7 +35,7 @@ get_header(); ?>
 				<?php
 					wp_link_pages(
 						array(
-							'before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ),
+							'before' => '<nav id="page-nav" aria-label="Page navigation"><p>' . __( 'Pages:', 'foundationpress' ),
 							'after'  => '</p></nav>',
 						)
 					);

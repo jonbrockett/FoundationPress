@@ -29,7 +29,7 @@
 		<?php
 			wp_link_pages(
 				array(
-					'before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ),
+					'before' => '<nav id="page-nav" aria-label="Page navigation"><p>' . __( 'Pages:', 'foundationpress' ),
 					'after'  => '</p></nav>',
 				)
 			);
