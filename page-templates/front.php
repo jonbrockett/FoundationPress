@@ -4,18 +4,18 @@ Template Name: Front
 */
 get_header(); ?>
 
-<header class="front-hero" role="banner">
-	<div class="marketing">
+<section class="front-hero">
+	<article class="marketing">
 		<div class="tagline">
-			<h1><?php bloginfo( 'name' ); ?></h1>
+			<h1 class="hero-title"><?php bloginfo( 'name' ); ?></h1>
 			<h2 class="h4 subheader"><?php bloginfo( 'description' ); ?></h2>
 		</div>
-	</div>
+	</article>
 
-</header>
+</section>
 
 
-<main id="main" class="intro" role="main">
+<main id="main" class="intro">
 
 	<?php
 	/**
@@ -24,9 +24,9 @@ get_header(); ?>
 	?>
 	<?php do_action( 'foundationpress_before_content' ); ?>
 	<?php while ( have_posts() ) : the_post(); ?>
-	<div class="fp-intro">
+	<section class="fp-intro">
 
-		<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 			<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
 			<div class="entry-content">
 				<?php the_content(); ?>
@@ -45,9 +45,9 @@ get_header(); ?>
 			<?php do_action( 'foundationpress_page_before_comments' ); ?>
 			<?php comments_template(); ?>
 			<?php do_action( 'foundationpress_page_after_comments' ); ?>
-		</div>
+		</article>
 
-	</div>
+	</section>
 	<?php endwhile; ?>
 	<?php do_action( 'foundationpress_after_content' ); ?>
 
