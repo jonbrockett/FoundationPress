@@ -77,3 +77,6 @@ require_once( 'library/string-to-slug.php' );
 
 /** Format phone numbers */
 require_once( 'library/phone-format.php' );
+
+/** Remove type= from <script> and <style> */
+require_once( 'library/head-type-remove.php') ;
