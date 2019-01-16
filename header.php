@@ -37,7 +37,7 @@
 		 * Site Header
 		 */
 		?>
-		<header id="header" class="site-header" role="banner">
+		<header id="header" class="site-header">
 
 			<?php
 			/**
