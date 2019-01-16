@@ -130,8 +130,17 @@ function get_the_image($attachment_id,$size = 'thumbnail', $icon = false, $attr 
 
     }
 
-    // Return new svg
+    // Add back <svg> tag
     $svg = str_replace($svg_tag_str, $svg_tag_sized, $svg);
+
+    /* Remove <?xml version="1.0" encoding="UTF-8"?> */
+    if(strpos($svg, '<?xml') === false) {
+      // Already formatted correctly
+    } else {
+      // Remove string
+      $svg = str_replace('<?xml version="1.0" encoding="UTF-8"?>', '', $svg);
+    }
+
     return $svg;
 
   } else {
