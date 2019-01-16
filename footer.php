@@ -14,7 +14,7 @@
  * Footer
  */
 ?>
-<footer id="footer" class="footer" role="contentinfo">
+<footer id="footer" class="footer">
   <div class="grid-container">
     <div class="grid-x">
       <div class="cell">
