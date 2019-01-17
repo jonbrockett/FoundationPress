@@ -79,4 +79,4 @@ require_once( 'library/string-to-slug.php' );
 require_once( 'library/phone-format.php' );
 
 /** Remove type= from <script> and <style> */
-require_once( 'library/head-type-remove.php') ;
+require_once( 'library/remove-type.php') ;
