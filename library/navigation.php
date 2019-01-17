@@ -11,6 +11,7 @@ register_nav_menus(
 	array(
 		'top-bar-r'  => esc_html__( 'Right Top Bar', 'foundationpress' ),
 		'mobile-nav' => esc_html__( 'Mobile', 'foundationpress' ),
+		'privacy-nav' => esc_html__( 'Privacy', 'foundationpress' ),
 	)
 );
 
