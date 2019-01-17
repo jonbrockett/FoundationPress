@@ -15,8 +15,8 @@ if ( ! function_exists( 'foundationpress_sidebar_widgets' ) ) :
 				'description'   => __( 'Drag widgets to this sidebar container.', 'foundationpress' ),
 				'before_widget' => '<section id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</section>',
-				'before_title'  => '<h6>',
-				'after_title'   => '</h6>',
+				'before_title'  => '<h2 class="h3">',
+				'after_title'   => '</h2 class="h3">',
 			)
 		);
 	}
