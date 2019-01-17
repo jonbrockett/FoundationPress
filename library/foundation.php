@@ -28,7 +28,7 @@ if ( ! function_exists( 'foundationpress_pagination' ) ) :
 			)
 		);
 
-		$paginate_links = str_replace( "<ul class='page-numbers'>", "<ul class='pagination text-center' role='navigation' aria-label='Pagination'>", $paginate_links );
+		$paginate_links = str_replace( "<ul class='page-numbers'>", "<ul class='pagination text-center' aria-label='Pagination'>", $paginate_links );
 		$paginate_links = str_replace( '<li><span class="page-numbers dots">', "<li><a href='#'>", $paginate_links );
 		$paginate_links = str_replace( '</span>', '</a>', $paginate_links );
 		$paginate_links = str_replace( "<li><span class='page-numbers current'>", "<li class='current'>", $paginate_links );
