@@ -67,7 +67,7 @@ if ( ! function_exists( 'foundationpress_mobile_nav' ) ) {
  			array(
  				'container'      => false,
  				'menu_class'     => 'menu',
- 				'items_wrap'     => '<ul id="%1$s" class="%2$s privacy-menu">%3$s</ul>',
+ 				'items_wrap'     => '<ul id="%1$s" class="%2$s privacy-menu align-center">%3$s</ul>',
  				'theme_location' => 'privacy-nav',
  				'depth'          => 1,
  				'fallback_cb'    => false,
