@@ -60,14 +60,13 @@
 
 // Global
 @import "global/accessibility";
-@import "global/colors";
 @import "global/wp-admin";
 @import "global/wp-overrides";
 @import "global/gutenberg";
 @import "global/svg";
 @import "global/headers";
 @import "global/helper-classes";
-//@import "global/url-friendly-color"; // used for colors in SVGs in background-image
+@import "global/url-friendly-color"; // used for colors in SVGs in background-image
 
 // Modules
 @import "modules/navigation";
