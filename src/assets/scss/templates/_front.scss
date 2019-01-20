@@ -1,53 +1,49 @@
+// Top frame
+.top-frame {
+  min-height: rem-calc(500);
+  body.admin-bar & {
+    height: calc(100vh - #{$admin-bar-mobile-height});
+    @include breakpoint(adminbar) {
+      height: calc(100vh - #{$admin-bar-height});
+    }
+  }
+}
+
 // Page header
 .front-hero {
-  .marketing {
-    @include xy-grid-container(55rem);
-    @include xy-grid;
-  }
-
-  @include breakpoint(small) {
-    background-size: cover;
-    background-position: bottom;
-    padding: rem-calc(65%) 0;
-    margin: 0 0 rem-calc(32);
-    height: auto;
-    position: relative;
-    text-align: left;
-  }
-
-  @include breakpoint(medium) {
-    background-size: cover;
-    background-position: center;
-    height: rem-calc(685);
-    margin: 0 0 rem-calc(72);
-  }
-
-  .tagline {
-    @include breakpoint(small) {
-      @include xy-cell(8);
-    }
-
-    @include breakpoint(medium) {
-      @include xy-cell(5);
-      padding-top: 6rem;
-    }
-  }
-
+  background-color: $primary-color;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23158ddd'/%3E%3Cstop offset='1' stop-color='%2346023b'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23a8c3ff' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23a8c3ff' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center 20%;
 }
 
 // Intro
 .intro {
-  @include xy-grid-container;
-  @include xy-grid;
 
-  .fp-intro {
-    @include breakpoint(small) {
-      @include xy-cell(12);
-    }
+  .section-spacing {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
 
-    @include breakpoint(medium) {
-      @include xy-cell(10);
-      @include xy-cell-offset(1);
+// Latest Posts
+.latest-posts {
+  background-color: darken($primary-color,5%);
+
+  .section-spacing {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .card {
+
+    .card-image {
+      img {
+        height: rem-calc(200);
+        object-fit: cover;
+        object-position: center 20%;
+      }
     }
   }
 }
