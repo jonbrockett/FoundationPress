@@ -1,12 +1,12 @@
 // Navigation breakpoints
 .mobile-menu,
 .site-title-bar {
-  @include hide-for(medium);
+  @include hide-for(large);
 }
 
 .desktop-menu,
 .site-navigation .top-bar-left {
-  @include show-for(medium);
+  @include show-for(large);
 }
 
 // Site title
@@ -31,14 +31,14 @@
     }
   }
 
-  .menu .active > a { background-color: #ccc; }
+  .menu .active > a { background-color: $medium-gray; }
 
 }
 
 .title-bar-title {
   a {
     font-size: 1rem;
-    color: #B9B9B9;
+    color: $medium-gray;
   }
 }
 
@@ -46,7 +46,7 @@
 .mobile-off-canvas-menu {
 
   .menu .is-active > a {
-    background-color: lighten($dark-nav-color, 5%);
+    background-color: lighten($primary-color, 5%);
   }
 }
 
@@ -56,13 +56,13 @@
 
   .top-bar-title a {
     font-size: 1rem;
-    color: #B9B9B9;
+    color: $medium-gray;
     padding-left: 1rem;
     line-height: 1.8;
   }
 
   .menu a {
-    color: #e6e6e6;
+    color: $light-gray;
     padding-top: 0;
     padding-bottom: 0;
     font-weight: bold;
@@ -70,14 +70,14 @@
     line-height: 1;
 
     &:hover:not(.button) {
-      background-color: #42525D;
+      background-color: $dark-gray;
     }
   }
 
-  .menu .active > a { background-color: #ccc; }
+  .menu .active > a { background-color: $medium-gray; }
 
   .menu>li:not(.menu-text)>a { padding: 1rem; }
-  .menu li:not(:last-child) { border-right: 1px solid #4e4e4e; }
+  .menu li:not(:last-child) { border-right: 1px solid $dark-gray; }
 
   .dropdown.menu .submenu { border: 0; }
   .dropdown.menu .has-submenu.is-down-arrow a { padding-right: 1rem; }
@@ -86,8 +86,8 @@
 }
 
 .site-navigation {
-  @include breakpoint(small only) {
-    padding: 0; // prevents container visibility on small screens
+  @include breakpoint(medium down) {
+    padding: 0; // prevents container visibility on medium and down screens
   }
 }
 
@@ -102,4 +102,30 @@
 
 .nav-next {
   float:right;
+}
+
+// Sticky
+.site-header {
+  position: relative;
+  z-index: 10;
+
+  &.sticky.is-stuck {
+    z-index: 10;
+  }
+
+  &.sticky {
+    transition: box-shadow .3s;
+
+    // WP menu adjust
+    body.admin-bar &.is-stuck {
+      top: #{$admin-bar-mobile-height} !important;
+      @include breakpoint(adminbar) {
+        top: #{$admin-bar-height} !important;
+      }
+    }
+
+    &.is-at-top.is-stuck {
+      box-shadow: 0 0 rem-calc(10) rgba($black,.2);
+    }
+  }
 }
