@@ -67,6 +67,7 @@
 @import "global/headers";
 @import "global/helper-classes";
 @import "global/url-friendly-color"; // used for colors in SVGs in background-image
+@import "global/general";
 
 // Modules
 @import "modules/navigation";
@@ -82,6 +83,7 @@
 @import "components/links";
 @import "components/gravity-forms";
 @import "components/reversed";
+@import "components/back-to-top";
 
 // Templates
 @import "templates/front";
