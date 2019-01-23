@@ -147,7 +147,7 @@ echo '</div>'; ?>
 					<?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
 					<?php // The content ?>
-					<div class="cell medium-6 large-4 text-center<?php if($i == $posts_total): ?> hide-for-medium-only<?php endif; ?>">
+					<div class="cell small-8 medium-6 large-4 text-center<?php if($i == $posts_total): ?> hide-for-medium-only<?php endif; ?>">
 						<article <?php post_class('card full-height'); ?> id="post-<?php the_ID(); ?>">
 							<div class="card-image">
 								<?php if ( has_post_thumbnail( $post->ID ) ) :
