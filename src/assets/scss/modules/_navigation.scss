@@ -28,10 +28,31 @@
       color: $white;
       font-weight: 600;
       font-size: rem-calc(15);
+      padding: .781rem 1rem;
+      margin-bottom: rem-calc(1);
+
+      &:hover,
+      &:focus {
+        background-color: darken($offcanvas-background,10%);
+      }
+
+    }
+
+    // offcanvas dropdown button
+    .submenu-toggle {
+      background-color: darken($offcanvas-background,30%);
     }
   }
 
-  .menu .active > a { background-color: $medium-gray; }
+  .menu .active > a {
+    background-color: $medium-gray;
+
+    // Off canvas menu hover
+    &:hover,
+    &:focus {
+      background-color: darken($offcanvas-background,10%);
+    }
+  }
 
 }
 
@@ -74,15 +95,44 @@
     }
   }
 
+  // Submenu arrow
+  .menu.vertical > li {
+
+    &.opens-left > a {
+
+      &::after {
+        border-color: transparent $white transparent transparent;
+        left: 10px;
+        margin-top: -5px;
+      }
+    }
+
+    &.opens-right > a {
+
+      &::after {
+        border-color: transparent transparent transparent $white;
+        right: 10px;
+        margin-top: -5px;
+      }
+    }
+  }
+
   .menu .active > a { background-color: $medium-gray; }
 
-  .menu>li:not(.menu-text)>a { padding: 1rem; }
-  .menu li:not(:last-child) { border-right: 1px solid $dark-gray; }
+  .menu>li:not(.menu-text)>a { padding: 1rem; padding-right: 2rem; }
+  .menu.submenu>li:not(.menu-text)>a { padding-left: 2rem; padding-right: 1rem; }
+  .menu li:not(:last-child) {
+    //border-right: 1px solid $dark-gray;
+  }
 
   .dropdown.menu .submenu { border: 0; }
   .dropdown.menu .has-submenu.is-down-arrow a { padding-right: 1rem; }
-  .dropdown.menu .has-submenu.is-down-arrow > a::after { border: 0; }
-  .dropdown.menu:first-child > li.is-dropdown-submenu-parent > a::after { display: none; }
+  .dropdown.menu .has-submenu.is-down-arrow > a::after { border: 0; padding-right: 2rem; }
+  .dropdown.menu:first-child > li.is-dropdown-submenu-parent > a::after {
+    //display: none; // Hide dropdown arrow
+    border-color: $white transparent transparent;
+    right: 10px;
+  }
 }
 
 .site-navigation {
