@@ -16,7 +16,7 @@ get_header(); ?>
 				<div class="cell medium-8 large-6">
 					<article class="marketing text-center">
 						<header class="tagline">
-							<h1 class="hero-title"><?php bloginfo( 'name' ); ?></h1>
+							<h1 class="hero-title"><?php the_title(); ?></h1>
 							<h2 class="h4"><?php bloginfo( 'description' ); ?></h2>
 						</header>
 					</article>
