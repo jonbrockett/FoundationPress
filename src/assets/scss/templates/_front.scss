@@ -1,6 +1,9 @@
 // Top frame
 .top-frame {
-  min-height: rem-calc(500);
+  min-height: rem-calc(400);
+  @include breakpoint(medium) {
+    min-height: rem-calc(500);
+  }
   body.admin-bar & {
     height: calc(100vh - #{$admin-bar-mobile-height});
     @include breakpoint(adminbar) {
@@ -45,5 +48,13 @@
         object-position: center 20%;
       }
     }
+  }
+}
+
+// Back to top
+.back-to-top-sticky {
+
+  body.page-template-front & {
+    background-color: darken($primary-color,5%);
   }
 }
