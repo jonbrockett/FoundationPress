@@ -82,16 +82,27 @@
     line-height: 1.8;
   }
 
-  .menu a {
-    color: $light-gray;
-    padding-top: 0;
-    padding-bottom: 0;
-    font-weight: bold;
-    font-size: 0.8rem;
-    line-height: 1;
+  .menu {
 
-    &:hover:not(.button) {
-      background-color: $dark-gray;
+    a {
+      color: $light-gray;
+      padding-top: 0;
+      padding-bottom: 0;
+      font-weight: bold;
+      font-size: 0.8rem;
+      line-height: 1;
+
+      &:hover:not(.button),
+      &:focus:not(.button) {
+        background-color: darken($primary-color,10%);
+      }
+    }
+
+    // Highlights current page
+    > li.current_page_item {
+      > a {
+        background-color: darken($primary-color,30%);
+      }
     }
   }
 
@@ -117,10 +128,11 @@
     }
   }
 
-  .menu .active > a { background-color: $medium-gray; }
+  .menu .active > a { background-color: darken($primary-color,30%); }
 
-  .menu>li:not(.menu-text)>a { padding: 1rem; padding-right: 2rem; }
-  .menu.submenu>li:not(.menu-text)>a { padding-left: 2rem; padding-right: 1rem; }
+  .menu>li:not(.menu-text)>a { padding: 1rem; }
+  .menu>li.is-dropdown-submenu-parent:not(.menu-text)>a { padding-right: 2rem; }
+  .menu.submenu>li.is-dropdown-submenu-parent:not(.menu-text)>a { padding-left: 2rem; padding-right: 1rem; }
   .menu li:not(:last-child) {
     //border-right: 1px solid $dark-gray;
   }
