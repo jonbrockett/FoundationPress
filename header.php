@@ -23,7 +23,7 @@
 		 * Skip Links
 		 */
 		?>
-		<nav id="skip-links" class="skip-links" aria-label="Skip links" data-smooth-scroll>
+		<nav id="skip-links" class="skip-links" aria-label="Skip links">
 			<a class="screen-reader-text" href="#main">Skip to content</a>
 			<a class="screen-reader-text" href="#menu">Skip to navigation</a>
 		</nav>
