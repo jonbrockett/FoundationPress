@@ -26,6 +26,7 @@
 		<nav id="skip-links" class="skip-links" aria-label="Skip links">
 			<a class="screen-reader-text" href="#main">Skip to content</a>
 			<a class="screen-reader-text" href="#menu">Skip to navigation</a>
+			<a class="screen-reader-text" href="#footer">Skip to footer</a>
 		</nav>
 
 		<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>
