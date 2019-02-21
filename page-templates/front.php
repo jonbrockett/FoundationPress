@@ -30,7 +30,7 @@ get_header(); ?>
 <?php // END Top Frame
 echo '</div>'; ?>
 
-<main id="main">
+<main id="main" tabindex="-1">
 
 	<?php
 	/**
