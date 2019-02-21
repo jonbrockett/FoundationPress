@@ -9,9 +9,9 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> aria-labelledby="entry-title">
 	<header>
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+		<h1 id="entry-title" class="entry-title"><?php the_title(); ?></h1>
 	</header>
 	<div class="entry-content">
 		<?php the_content(); ?>

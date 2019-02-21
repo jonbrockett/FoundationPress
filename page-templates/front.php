@@ -9,14 +9,14 @@ get_header(); ?>
  * Hero
  */
 ?>
-<section class="front-hero full-height">
+<section class="front-hero full-height" aria-labelledby="hero-title">
 	<div class="reversed full-height">
 		<div class="grid-container full-height">
 			<div class="grid-x full-height align-center-middle">
 				<div class="cell medium-8 large-6">
 					<article class="marketing text-center">
 						<header class="tagline">
-							<h1 class="hero-title"><?php the_title(); ?></h1>
+							<h1 id="hero-title" class="hero-title"><?php the_title(); ?></h1>
 							<h2 class="h4"><?php bloginfo( 'description' ); ?></h2>
 						</header>
 					</article>
@@ -39,7 +39,7 @@ echo '</div>'; ?>
 	?>
 	<?php do_action( 'foundationpress_before_content' ); ?>
 	<?php while ( have_posts() ) : the_post(); ?>
-	<section class="intro">
+	<section class="intro" aria-labelledby="intro-title">
 		<div class="section-spacing">
 			<div class="grid-container">
 				<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
@@ -81,7 +81,7 @@ echo '</div>'; ?>
 						<div class="cell medium-7 large-8 text-center medium-text-left">
 							<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
 							<header class="show-for-sr">
-							<h2 class="intro-title">Intro</h2>
+							<h2 id="intro-title" class="intro-title">Intro</h2>
 							</header>
 							<div class="intro-content">
 								<?php the_content(); ?>
@@ -133,13 +133,13 @@ echo '</div>'; ?>
 
 	// The Loop
 	if ( $query->have_posts() ) : ?>
-	<section class="latest-posts">
+	<section class="latest-posts" aria-labelledby="latest-post-title">
 		<div class="section-spacing">
 			<div class="grid-container">
 				<div class="grid-x grid-padding-x grid-padding-y align-center align-stretch">
 					<div class="cell reversed">
 						<header>
-							<h2 class="text-center">Latest Posts</h2>
+							<h2 id="latest-post-title" class="latest-post-title" class="text-center">Latest Posts</h2>
 						</header>
 					</div>
 
@@ -148,7 +148,7 @@ echo '</div>'; ?>
 
 					<?php // The content ?>
 					<div class="cell small-8 medium-6 large-4 text-center<?php if($i == $posts_total): ?> hide-for-medium-only<?php endif; ?>">
-						<article <?php post_class('card full-height'); ?> id="post-<?php the_ID(); ?>">
+						<article <?php post_class('card full-height'); ?> id="post-<?php the_ID(); ?>" aria-labelledby="post-title-<?php the_ID(); ?>">
 							<div class="card-image">
 								<?php if ( has_post_thumbnail( $post->ID ) ) :
 									echo the_post_thumbnail('small');
@@ -156,7 +156,7 @@ echo '</div>'; ?>
 							</div>
 						  <div class="card-section">
 								<header>
-									<h3 class="post-title"><?php the_title(); ?></h3>
+									<h3 id="post-title-<?php the_ID(); ?>" class="post-title"><?php the_title(); ?></h3>
 								</header>
 								<?php the_content(); ?>
 						  </div>
